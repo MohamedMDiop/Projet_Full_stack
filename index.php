@@ -31,9 +31,9 @@
        </li>
        <li>
          <a
-           href="page/about.php"
+           href="page/stock.php"
            data-text="About"
-           >About</a
+           >Stok</a
          >
        </li>
      </ul>

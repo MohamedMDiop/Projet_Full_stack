@@ -30,10 +30,9 @@
             </li>
             <li>
               <a
-                href="about.php"
-                data-text="About"
-                >About</a
-              >
+                href="stock.php"
+                data-text="Stock"
+                >Stock</a>
             </li>
           </ul>
           <!-------------------------Navbar-------------------------------->

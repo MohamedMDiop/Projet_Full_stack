@@ -1,19 +1,20 @@
 /* Style général */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Conteneur */
-.container {
-  display: flex;
+.container { 
   justify-content: center;
   align-items: center;
 }
 
 /* Tableau */
 .tableau {
+  min-width: 560px;
   border-collapse: collapse;
   width: 200px; /* Ajuster la largeur selon vos besoins */
   border: 1px solid #ccc;
@@ -47,4 +48,37 @@ body {
 #quantiteRestante {
   font-weight: bold;
   color: #4caf50; /* Couleur verte */
+}
+
+.input-box {
+  height: 52px;
+  margin: 18px 0;
+  width: 100%;
+}
+.input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-color: #4caf50;
+}
+.input-box.button input {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #4caf50;
+  cursor: pointer;
+}
+.input-box.button input:hover {
+  background: #0e4bf1;
 }

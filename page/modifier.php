@@ -40,12 +40,22 @@
     <!-------------------------Navbar-------------------------------->
     <div class="wrapper">
       <h2>Enregistrement</h2>
-      <form action="traitement/_ajout.php" method="POST">
+      <?php
+        require('traitement/_connexion_bd.php');
+        if(!isset($_GET['id'])){
+            header("Location: stock.php");
+        }
+        $id = $_GET['id'];
+        $query = $bdd->prepare('SELECT * FROM culture WHERE id_culture = ?');
+        $query->execute(array($id));
+        $row = $query->fetch(PDO::FETCH_ASSOC);
+      ?>
+      <form action="traitement/_modifier.php?id=<?php echo $row['id_culture'] ?>" method="POST">
         <div class="input-box">
-          <input type="text" placeholder="Entrez votre produit" name="nom" required />
+          <input type="text" placeholder="Entrez votre produit" name="nom" value="<?php echo $row['nom'] ?>" />
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Entrez la quantité" name="quantite" required />
+          <input type="text" placeholder="Entrez la quantité" name="quantite" value="<?php echo $row['quantite'] ?>" required />
         </div>
         <div class="input-box button">
           <input type="Submit" value="Enregistrer" />

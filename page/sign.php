@@ -31,10 +31,9 @@
           </li>
           <li>
             <a
-              href="about.php"
+              href="stock.php"
               data-text="About"
-              >About</a
-            >
+              >Stock</a>
           </li>
         </ul>
           <!-------------------------Navbar-------------------------------->
@@ -80,7 +79,7 @@
         </div>
         <div class="text">
           <h3>
-            Vous avez déja un compte ?<a href="../page/login.php"
+            Vous avez déja un compte ?<a href="login.php"
               >Connectez vous</a
             >
           </h3>

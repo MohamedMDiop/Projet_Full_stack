@@ -12,6 +12,8 @@
     if(isset($_GET["etat"])){
       if($_GET["etat"] == 1){
         echo "<script>alert('Ce login existe deja !');</script>";
+      }else if($_GET["etat"] == 2){
+          echo "<script>alert('Login ou mot de passe incorrect !');</script>";
       }
     }
   ?>
@@ -38,10 +40,9 @@
             </li>
             <li>
               <a
-                href="about.php"
-                data-text="About"
-                >About</a
-              >
+                href="stock.php"
+                data-text="Stock"
+                >Stock</a>
             </li>
           </ul>
           <!-------------------------/Navbar-------------------------------->
@@ -49,15 +50,15 @@
     <div class="login-page">
       <div class="form">
         <form class="register-form">
-          <input type="text" placeholder="name" />
-          <input type="password" placeholder="password" />
+          <input type="text" placeholder="name"/>
+          <input type="password" placeholder="password"/>
           <input type="text" placeholder="email address" />
           <button>create</button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
         </form>
-        <form class="login-form">
-          <input type="text" placeholder="username" />
-          <input type="password" placeholder="password" />
+        <form class="login-form" action="traitement/_login.php" method="POST">
+          <input type="text" placeholder="username" name="login"/>
+          <input type="password" placeholder="password" name="mdp" />
           <button>login</button>
           <p class="message">
             Not registered? <a href="sign.php">Create an account</a>
