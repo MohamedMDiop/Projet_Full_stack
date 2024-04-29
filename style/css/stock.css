@@ -1,0 +1,50 @@
+/* Style général */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Conteneur */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tableau */
+.tableau {
+  border-collapse: collapse;
+  width: 200px; /* Ajuster la largeur selon vos besoins */
+  border: 1px solid #ccc;
+}
+
+/* En-tête du tableau */
+.tableau thead th {
+  background-color: #e8f0fe; /* Couleur d'arrière-plan vert clair */
+  color: #333;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* Contenu du tableau */
+.tableau tbody td {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Sélection */
+#choixCulture {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Quantité restante */
+#quantiteRestante {
+  font-weight: bold;
+  color: #4caf50; /* Couleur verte */
+}
